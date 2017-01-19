@@ -43,6 +43,13 @@ Run a task and any dependency tasks it has.
  - `done` (`Function`): A completion callback.  Receives `(err, task || tasks)`
 
 ```js
+task.run('foo', function (err, task) {
+  // ...
+})
+
+task.run(['foo', 'bar', 'qux'], function (err, tasks) {
+  // ...
+})
 ```
 
 ## License
