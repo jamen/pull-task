@@ -48,7 +48,7 @@ function run (name, done, _previous) {
     })
   }
 
-  // Run dependencies:
+  // Run task:
   if (deps && deps.length) {
     return run(deps, function (err) {
       if (err) return done(err, main)
